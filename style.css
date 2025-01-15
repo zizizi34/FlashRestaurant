@@ -191,10 +191,10 @@
   }
  /* From Uiverse.io by satyamchaudharydev */ 
 button {
-  --primary-color: #645bff;
+  --primary-color: #ffb411;
   --secondary-color: #fff;
   --hover-color: #111;
-  --arrow-width: 10px;
+  --arrow-width: 10px;  
   --arrow-stroke: 2px;
   box-sizing: border-box;
   border: 0;
@@ -202,7 +202,7 @@ button {
   border-radius: 20px;
   color: var(--secondary-color);
   padding: 1em 1.8em;
-  background: var(--primary-color);
+  background: var(--hover-color);
   display: flex;
   transition: 0.2s background;
   align-items: center;
@@ -219,7 +219,7 @@ button .arrow-wrapper {
 button .arrow {
   margin-top: 1px;
   width: var(--arrow-width);
-  background: var(--primary-color);
+  background: var(--hover-color);
   height: var(--arrow-stroke);
   position: relative;
   transition: 0.2s;
@@ -240,7 +240,7 @@ button .arrow::before {
 }
 
 button:hover {
-  background-color: var(--hover-color);
+  background-color: var(--primary-color);
 }
 
 button:hover .arrow {
