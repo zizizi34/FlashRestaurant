@@ -179,7 +179,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    margin-top: 17rem;
+    margin-top: 20rem;
     margin-right: 1rem;
     font-size: 20px;
     background: var(--main-color);
@@ -189,6 +189,67 @@
   .box .bx:hover {
     background: #ffa400;
   }
+ /* From Uiverse.io by satyamchaudharydev */ 
+button {
+  --primary-color: #645bff;
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  margin-left: 73rem;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+}
+
+button .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+button .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+button:hover .arrow {
+  background: var(--secondary-color);
+}
+
+button:hover .arrow:before {
+  right: 0;
+}
   .servives-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, auto));
@@ -203,6 +264,22 @@
   }
   .s-box h3 {
     margin: 4px 0 10px;
+  }
+  .brands-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .brands-container img {
+    width: 100px;
+    filter: grayscale(1);  
+  }
+  .brands-container img:hover {
+    width: 100px;
+    filter: grayscale(0);
   }
   .connect {
     display: flex;
